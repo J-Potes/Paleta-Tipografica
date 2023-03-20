@@ -15,8 +15,6 @@
     --black: #000;
     --white: #fff;
 
-    --mainFont: 'JetBrains Mono', monospace;
-
     --fuenteParrafo: 'Nunito', sans-serif;
     --fuenteTitulo: 'Sono', sans-serif;
 }
@@ -56,10 +54,42 @@ body {
 	margin-right: auto;
 }
 
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--verdeJP-100);
+    text-align: center;
+    
+    text-transform: uppercase;
+    border-bottom-style: solid;
+    border-bottom-color: var(--rosadoJP-acento);
+    border-bottom-width: 0.2em;
+}
+
+.encabezado p {
+    font-family: potesFont;
+    font-size: 2.25em;
+}
+
+.encabezado p span {
+    font-family: var(--fuenteTitulo);
+    font-weight: bold;
+    font-size: 0.6em;
+}
+
+.separacion {
+    background-color: var(--rosadoJP-acento);
+    width: 100%;
+    height: 0.2em;
+    margin: 1em 0;
+}
+
 /** Titulos **/
 
 .titulo_principal {
     font-family: potesFont;
+    font-weight: normal;
 }
 
 .subtitulo {
@@ -71,15 +101,27 @@ body {
     font-weight: 600;
 }
 
-.destacado span {
-    font-weight: 400;
-}
-
 .subtitulo_parrafo {
     font-family: var(--fuenteParrafo);
     font-weight: bold;
 }
 
+/** Seccion Iconos **/
+
+.subtitulo_parrafo span {
+    font-weight: 400;
+}
+
+.icono {
+    font-size: 2.25em;
+    margin: 0 0.2em;
+}
+
+.centrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /** Seccion Destacados**/
 
@@ -94,7 +136,7 @@ body {
 }
 
 .titulo_seccion {
-    margin-bottom: 0;
+    margin: 0;
     text-align: center;
 }
 
@@ -123,4 +165,146 @@ body {
 	padding: 1.5em;
     background-color: var(--verdeJP-s15b95);
     color: var(--black);
+}
+
+/** Seccion input **/
+
+.form1 {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.label {
+    font-family: var(--fuenteTitulo);
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+.input_texto {
+    border-radius: 5px;
+    border: 0.2em solid var(--verdeJP-S60);
+    font-family: var(--fuenteParrafo);
+}
+
+/** Seccion Botones **/
+
+.form2 {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+@media (max-width: 535px) {
+    .form2 {
+        flex-direction: column;
+    }
+}
+
+.boton_nav {
+    display: flex;
+    justify-content: center;
+}
+
+.boton_nav input {
+    background-color: var(--verdeJP-100);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 1em 2em;
+    border: none;
+    margin: 0 1em;
+    font-family: var(--fuenteTitulo);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.boton_nav input:hover {
+    cursor: pointer;
+    background-color: var(--verdeJP-s15b95);
+    color: var(--verdeJP-b30);
+}
+
+.boton_nav input:active {
+    background-color: var(--rosadoJP-acento);
+    color: var(--black);
+}
+
+.boton_general {
+    display: flex;
+    justify-content: center;
+}
+
+.boton_general input{
+    background-color: var(--rosadoJP-acento);
+    border: none;
+    padding: 1em 2em;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 1em;
+    font-family: var(--fuenteTitulo);
+    font-weight: bold;
+    font-size: 1em;
+    opacity: 0.8;
+}
+
+.boton_general input:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.boton_general input:active {
+    background-color: var(--rosadoJP-acento);
+    color: var(--white);
+}
+
+.boton_general input:hover {
+    cursor: pointer;
+}
+
+.boton_submit {
+    display: flex;
+    justify-content: center;
+}
+
+.boton_submit input{
+    background-color: var(--azulJP-sem);
+    color: var(--white);
+    border: none;
+    padding: 1em 2em;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 1em;
+    font-family: var(--fuenteTitulo);
+    font-weight: bold;
+    font-size: 1em;
+    opacity: 0.8;
+}
+
+.boton_submit input:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.boton_submit input:active {
+    color: var(--black);
+}
+
+@media (max-width: 535px) {
+    .boton_nav {
+        margin: 0.25rem 0;
+    }
+    
+    .boton_general {
+        margin: 0.25rem 0;
+    }
+
+    .boton_submit {
+        margin: 0.25rem 0;
+    }
+}
+
+/** Seccion parrafos **/
+
+.parrafo {
+    font-family: var(--fuenteParrafo);
 }
