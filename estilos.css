@@ -1,0 +1,126 @@
+:root {
+	--verdeJP-100: #009E88;
+	--verdeJP-b30: #004D42;
+	--verdeJP-s30: #6F9E97;
+	--verdeJP-S60: #3F9E90;
+	--verdeJP-s15b95: #CEF2EC;
+
+	--rosadoJP-acento: #EDB2BA;
+
+	--azulJP-sem: #46A7EF;
+	--naranjaJP-sem: #DA9344;
+	--rojoJP-sem: #BC3345;
+
+    --bgColor: #1E1E1E;
+    --black: #000;
+    --white: #fff;
+
+    --mainFont: 'JetBrains Mono', monospace;
+
+    --fuenteParrafo: 'Nunito', sans-serif;
+    --fuenteTitulo: 'Sono', sans-serif;
+}
+
+/** Global **/
+
+h1 {
+    font-size: 5.063em;
+}
+h2 {
+    font-size: 3.375em;
+}
+h3 {
+    font-size: 2.25em;
+}
+h4 {
+    font-size: 1.5em;
+}
+p {
+    font-size: 1em;
+}
+
+@font-face {
+  font-family: potesFont;
+  src: url(PotesFont.ttf);
+}
+
+body {
+    background-color: var(--bgColor);
+    color: var(--white);
+}
+
+
+.contenedor{
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/** Titulos **/
+
+.titulo_principal {
+    font-family: potesFont;
+}
+
+.subtitulo {
+    font-family: var(--fuenteTitulo);
+}
+
+.destacado {
+    font-family: var(--fuenteTitulo);
+    font-weight: 600;
+}
+
+.destacado span {
+    font-weight: 400;
+}
+
+.subtitulo_parrafo {
+    font-family: var(--fuenteParrafo);
+    font-weight: bold;
+}
+
+
+/** Seccion Destacados**/
+
+.contenedor_destacados {
+    display: flex;
+}
+
+@media (max-width: 760px) {
+    .contenedor_destacados {
+        flex-direction: column;
+    }
+}
+
+.titulo_seccion {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.destacado-alerta {
+    font-family: var(--fuenteParrafo);
+    margin: 1rem 0.5rem;
+    border-radius: 10px;
+	padding: 1.5em;
+    background-color: var(--rojoJP-sem);
+    color: var(--white);
+}
+
+.destacado-aviso {
+    font-family: var(--fuenteParrafo);
+    margin: 1rem 0.5rem;
+    border-radius: 10px;
+	padding: 1.5em;
+    background-color: var(--naranjaJP-sem);
+    color: var(--white);
+}
+
+.destacado-neutro {
+    font-family: var(--fuenteParrafo);
+    margin: 1rem 0.5rem;
+    border-radius: 10px;
+	padding: 1.5em;
+    background-color: var(--verdeJP-s15b95);
+    color: var(--black);
+}
